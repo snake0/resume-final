@@ -1,0 +1,92 @@
+% !TEX program = xelatex
+
+\documentclass{resume}
+%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{Xingguo Jia}
+
+\basicInfo{
+  \email{jiaxg1998@sjtu.edu.com} }
+  % \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
+  % \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2020 -- Present}
+\textit{Master student} in Software Engineering (SE), expected March 2023
+\begin{itemize}
+  \item Advisor: Prof. Zhengwei Qi
+\end{itemize}
+\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2016 -- 2020}
+\textit{B.E.} in Software Engineering (SE)
+
+\section{\faUsers\ Research Experiences}
+\datedsubsection{\textbf{SJTU}, Lab of System Control and Information Processing}{Sep. 2017 -- Jun. 2019}
+\role{Differential Privacy}{}
+Brief introduction:
+\begin{itemize}
+  \item Designing an algorithm for nodes in a cluster to reach a consensus on some status, such as clock.
+\end{itemize}
+
+\datedsubsection{\textbf{SJTU}, Trusted Cloud Group (TCloud)}{Jun. 2019 -- Present}
+\role{GiantVM}{}
+Brief introduction:
+\begin{itemize}
+  \item Optimizing GiantVM performance when running memory-intensive applications.
+\end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faInfo\ Projects}
+\datedsubsection{\textbf{GiantVM: DSM-aware Scheduler}}{Aug. 2020 -- Oct. 2021}
+\textbf{Link:} https://github.com/GiantVM/Linux-DSM/tree/taco-eval
+
+On GiantVM, memory-intensive applications could suffer from cross-node page sharing, which requires frequent DSM involvement and leads to performance collapse. We design the guest-level thread scheduler, DaS (DSM-aware Scheduler), to overcome the bottleneck. When benchmarking with NPB, the DaS could achieve a performance boost of up to 3.5$\times$, compared to the default Linux kernel scheduler. 
+
+\datedsubsection{\textbf{YFS: Yet another File System}}{Sep. 2018 -- Jan. 2019}
+\textbf{Link:} https://github.com/snake0/lab-cse
+
+Implement a distributed file system YFS based on \texttt{inode} and \texttt{RPC} in C++. We first implement a single-node version of YFS that supports sequential read/write operations, then extend it to be distributed using RPC. Finally we implement a lock server that could batch locking requests for concurrent file system accesses.
+
+\section{\faGraduationCap\ Publications}
+\begin{itemize}
+\item Jin Zhang, Zhuocheng Ding, Yubin Chen, \textbf{Xingguo Jia}, Boshi Yu, Zhengwei Qi, and Haibing Guan. 2020. GiantVM: a Type-II Hypervisor Implementing Many-to-one Virtualization. In \textit{VEE'20}
+\item \textbf{Xingguo Jia}, Jin Zhang, Boshi Yu, Xingyue Qian, Zhengwei Qi, and Haibing Guan. 2021. GiantVM: A Novel Distributed Hypervisor for Resource Aggregation with DSM-aware Optimizations. In \textit{TACO'22} (To appear)
+\end{itemize}
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item Programming Languages: C == Python > C++ > Shell
+  \item Tools: \LaTeX, Git, GDB, HTML, CSS
+  \item Systems: Linux, QEMU
+\end{itemize}
+
+\section{\faHeartO\ Honors and Awards}
+\datedline{\textit{First-class} academic scholarship, SJTU }{Dec. 2021}
+\datedline{Successful Participant, MCM }{Jan. 2019}
+
+\section{\faUsers\ Teaching Experiences}
+\datedline{Advanced Cloud Operating Systems, SJTU }{Dec. 2021}
+\datedline{Advanced Data Structure, SJTU }{Jun. 2021}
+
+\section{\faInfo\ Miscellaneous}
+\begin{itemize}[parsep=0.5ex]
+  \item GiantVM: https://giantvm.github.io/
+  \item GitHub: https://github.com/snake0
+  \item Languages: English - Fluent, Mandarin - Native speaker
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
+
