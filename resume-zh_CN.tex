@@ -16,7 +16,7 @@
 \name{贾\ 兴\ 国}
 
 \basicInfo{
-  \email{jiaxg1998@sjtu.edu.com} \textperiodcentered \
+  \email{jiaxg1998@sjtu.edu.cn} \textperiodcentered \
   \phone{(+86) 132-6262-6313} \textperiodcentered\ 
   \faGithub\ {https://github.com/snake0}}
 
@@ -26,28 +26,30 @@
 \datedsubsection{\textbf{上海交通大学（SJTU）}, 上海}{2020 -- 至今}
 \textit{在读硕士研究生}\ 软件工程, 预计 2023 年 3 月毕业
 \begin{itemize}
-  \item 上海市可扩展计算与系统重点实验室\ \ \textbf{研究方向:} 系统虚拟化、操作系统  \ \  \textbf{导师:} 戚正伟教授
+  \item 上海市可扩展计算与系统重点实验室
+  \item \textbf{研究方向:} 系统虚拟化、操作系统  \ \  \textbf{导师:} 戚正伟教授
 \end{itemize}
 \datedsubsection{\textbf{上海交通大学（SJTU）}, 上海}{2016 -- 2020}
 \textit{工学学士}\ 软件工程
 
 \section{\faUsers\ 研究经历}
-\datedsubsection{\textbf{SJTU}, 系统控制与信息处理实验室}{2017年9月 --  2019年6月}
-\textbf{差分隐私:} 设计一个算法，使得集群中的节点快速达成对于某种状态的一致（如时钟）
+% \datedsubsection{\textbf{SJTU}, 系统控制与信息处理实验室}{2017年9月 --  2019年6月}
+% \textbf{差分隐私:} 设计一个算法，使得集群中的节点快速达成对于某种状态的一致（如时钟）
 
 \datedsubsection{\textbf{SJTU}, 上海市可扩展计算与系统重点实验室}{2019年6月 -- 至今}
-\textbf{GiantVM:} 完成GiantVM宏观、微观性能测试，并进行性能优化
+\textit{GiantVM:} 完成GiantVM宏观、微观性能测试，并设计实现性能优化方案
 
 \section{\faInfo\ 项目经历}
 \datedsubsection{\textbf{GiantVM: DSM-aware 调度器}}{2020年8月 -- 2021年10月}
 \textbf{链接}: https://github.com/GiantVM/Linux-DSM/tree/taco-eval
 
-在 GiantVM 上，内存密集型应用会造成节点之间的内存页共享，从而需要频繁调用 DSM 模块，导致应用性能严重下降。于是，我设计了一个客户机操作系统中的 DSM-aware 调度器（简称 DaS），通过调整线程的调度决策，使得访问大量共享内存页的两个线程运行在 GiantVM 的同一个物理节点上。在 GiantVM 客户机中运行 NPB 内存密集型应用时，DaS可将应用性能相比Linux内核默认调度器提升 3.5 倍。我完成了所有代码的编写，并完成了性能测试
+在 GiantVM 上，内存密集型应用会造成节点之间的内存页共享，从而需要频繁调用 DSM 模块，导致应用性能严重下降。于是，我设计了一个客户机操作系统中的 DSM-aware 调度器（简称 DaS），通过调整线程的调度决策，使得访问大量共享内存页的两个线程运行在 GiantVM 的同一个物理节点上。在 GiantVM 客户机中运行 NPB 内存密集型应用时，DaS可将应用性能相比Linux内核默认调度器提升 3.5 倍。我完成了所有代码的编写，并完成了性能测试。
 
 \datedsubsection{\textbf{YFS: Yet another File System}}{2018年9月 -- 2019年1月}
 \textbf{链接:} https://github.com/snake0/lab-cse
 
-使用C++实现了分布式文件系统YFS。首先完成了一个基于\texttt{inode}的单节点文件系统，支持基础的操作，如创建、读写文件，又使用RPC将其扩展为分布式文件系统，最终实现锁服务器，减少了支持并行访问所需要的加锁、放锁操作
+使用C++实现了分布式文件系统YFS。首先完成了一个基于\texttt{inode}的单节点文件系统，支持基础的操作，如创建、读写文件，又使用RPC将其扩展为分布式文件系统，最终实现锁服务器，减少了支持并行访问所需要的加锁、放锁操作。
+
 
 \section{\faGraduationCap\ 发表论文}
 \begin{itemize}
@@ -65,7 +67,7 @@
 \section{\faCogs\ 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item \textbf{编程语言:} C == Python > C++ > Shell \ \ \textbf{工具:} \LaTeX， Git， GDB， HTML， CSS \ \ \textbf{系统:} Linux 
+  \item \textbf{编程语言:} C == Python > C++ > Shell \ \ \textbf{工具:} \LaTeX， Git， GDB \ \ \textbf{系统:} Linux 
 \end{itemize}
 
 \section{\faHeartO\ 获奖情况}
