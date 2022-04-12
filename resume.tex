@@ -1,6 +1,7 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
+
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 
@@ -27,10 +28,10 @@
 \textit{B.E.} in Software Engineering (SE), \textbf{GPA:} 3.50/4.30
 
 \section{\faUsers\ Research Experiences}
-\datedsubsection{\textbf{SJTU}, Trusted Cloud Group (TCloud), as a graduate student}{Jun. 2019 -- Jan. 2021}
+\datedsubsection{\textbf{SJTU}, Trusted Cloud Group (TCloud), Shanghai, China}{Jun. 2019 -- Jan. 2021}
 \textbf{\textit{GiantVM:}} Top-down performance evaluation and optimizations based on a thread scheduling algorithm.
 
-\datedsubsection{\textbf{Huawei Co. Hangzhou Research Inst.}, as an intern}{Feb. 2022 -- Present}
+\datedsubsection{\textbf{Huawei Co. Hangzhou Research Inst.}, as an intern, Hangzhou, China}{Feb. 2022 -- Present}
 \textbf{\textit{Memory Pool:}} A memory pool based on recent high-speed networks (in progress).
 
 % Reference Test
@@ -41,13 +42,11 @@
 %\end{itemize}
 
 \section{\faInfo\ Projects}
-\datedsubsection{\textbf{GiantVM: DSM-aware Scheduler}}{Aug. 2020 -- Oct. 2021}
-\textbf{Link:} https://github.com/GiantVM/Linux-DSM/tree/taco-eval
+\datedsubsection{\textbf{GiantVM: DSM-aware Scheduler}\ \ \href{https://github.com/GiantVM/Linux-DSM/tree/taco-eval}{\faGithubSquare}}{Aug. 2020 -- Oct. 2021} 
 
 On GiantVM, memory-intensive applications could suffer from cross-node page sharing, leading to performance collapse. To overcome the bottleneck, we design DSM-aware Scheduler (DaS) in the guest kernel. When benchmarking with NPB, DaS achieves a performance boost of up to 3.5$\times$, compared to CFS. 
 
-\datedsubsection{\textbf{YFS: Yet another File System}}{Sep. 2018 -- Jan. 2019}
-\textbf{Link:} https://github.com/snake0/lab-cse
+\datedsubsection{\textbf{YFS: Yet another File System}\ \ \href{https://github.com/snake0/lab-cse}{\faGithubSquare}}{Sep. 2018 -- Jan. 2019}
 
 Implementing a distributed file system YFS based on \texttt{inode} and \texttt{RPC} in C++. We first implemented a single-node version of YFS that supports sequential read/write operations, then extended it to be distributed using RPC. Finally, we implemented a lock server that could batch locking requests for concurrent file system accesses.
 
