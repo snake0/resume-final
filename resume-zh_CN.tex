@@ -24,37 +24,41 @@
  
 \section{\faGraduationCap\  教育背景}
 \datedsubsection{\textbf{上海交通大学（SJTU）}, 上海}{2020 -- 至今}
-\textit{在读硕士研究生}\ 软件工程, 预计 2023 年 3 月毕业
+\textit{在读硕士研究生}\ 软件工程, 预计 2023 年 3 月毕业，\textbf{GPA:} 3.83/4
 \begin{itemize}
-  \item 上海市可扩展计算与系统重点实验室
-  \item \textbf{研究方向:} 系统虚拟化、操作系统  \ \  \textbf{导师:} 戚正伟教授
+  \item 上海市可扩展计算与系统重点实验室 （TCloud）
+  \item \textbf{研究方向:} 系统虚拟化、操作系统、分布式系统  \ \  \textbf{导师:} 戚正伟教授
 \end{itemize}
 \datedsubsection{\textbf{上海交通大学（SJTU）}, 上海}{2016 -- 2020}
-\textit{工学学士}\ 软件工程
+\textit{工学学士}\ 软件工程, \textbf{GPA:} 3.50/4.30
+\begin{itemize}
+  \item \textbf{学习方向:} 系统软件
+\end{itemize}
 
 \section{\faUsers\ 研究经历}
-% \datedsubsection{\textbf{SJTU}, 系统控制与信息处理实验室}{2017年9月 --  2019年6月}
-% \textbf{差分隐私:} 设计一个算法，使得集群中的节点快速达成对于某种状态的一致（如时钟）
+\datedsubsection{\textbf{TCloud} SJTU, 上海}{2019年1月 -- 至今}
+{\textit{GiantVM:}} 自底向上性能测试与分析，基于线程调度的访存性能优化
 
-\datedsubsection{\textbf{SJTU}, 上海市可扩展计算与系统重点实验室}{2019年6月 -- 至今}
-\textit{GiantVM:} 完成GiantVM宏观、微观性能测试，并设计实现性能优化方案
+\datedsubsection{\textbf{华为杭州研究所}, 操作系统开发实习生, 杭州}{2022年2月 --至今}
+{\textit{Memory Pool:} 基于RDMA的集群内存池化方案调研与设计
 
 \section{\faInfo\ 项目经历}
-\datedsubsection{\textbf{GiantVM: DSM-aware 调度器}}{2020年8月 -- 2021年10月}
-\textbf{链接}: https://github.com/GiantVM/Linux-DSM/tree/taco-eval
+\datedsubsection{{\textbf{DaS:} 基于GiantVM 的 DSM-aware 调度器}\ \ \href{https://github.com/GiantVM/Linux-DSM/tree/taco-eval}{\faGithubSquare}}{2020年8月 -- 2021年10月}
 
-在 GiantVM 上，内存密集型应用会造成节点之间的内存页共享，从而需要频繁调用 DSM 模块，导致应用性能严重下降。于是，我设计了一个客户机操作系统中的 DSM-aware 调度器（简称 DaS），通过调整线程的调度决策，使得访问大量共享内存页的两个线程运行在 GiantVM 的同一个物理节点上。在 GiantVM 客户机中运行 NPB 内存密集型应用时，DaS可将应用性能相比Linux内核默认调度器提升 3.5 倍。我完成了所有代码的编写，并完成了性能测试。
+在 GiantVM 上，内存密集型应用会造成节点之间的内存页共享，导致应用性能严重下降。于是，我设计了DSM-aware 调度器（DaS），通过调度算法降低线程间的跨节点内存页共享。在 GiantVM 客户机中运行 NPB 内存密集型应用时，DaS相比Linux内核默认调度器提升应用性能 3.5 倍。
 
-\datedsubsection{\textbf{YFS: Yet another File System}}{2018年9月 -- 2019年1月}
-\textbf{链接:} https://github.com/snake0/lab-cse
+\datedsubsection{{\textbf{LaS:} 基于 GiantVM 的集群任务迁移机制}\ \ \href{https://github.com/snake0/bachelor-thesis}{\faGithubSquare}}{2020年4月 -- 2020年8月}
 
-使用C++实现了分布式文件系统YFS。首先完成了一个基于\texttt{inode}的单节点文件系统，支持基础的操作，如创建、读写文件，又使用RPC将其扩展为分布式文件系统，最终实现锁服务器，减少了支持并行访问所需要的加锁、放锁操作。
+数据中心一般通过虚拟机热迁移提升 CPU 使用率、保证服务QoS，但虚拟机热迁移存在网络带宽占用大、服务下线时间较长的问题。而GiantVM的分布式共享内存协议允许服务在目的节点缓存内存页。我利用这一优势设计了基于GiantVM的集群Load-aware调度机制（LaS），优化了高负载下集群服务的QoS，相比虚拟机热迁移降低了网络开销68\%。
 
+\datedsubsection{{\textbf{kRDMA:} 基于 IB verbs 的内核RDMA通信接口}\ \ \href{https://github.com/snake0/krdma}{\faGithubSquare}}{2022年4月 -- 2022年6月}
+
+IB verbs接口与传统的socket网络通信接口差别较大，编程难度较高。我对RDMA的四种原语进行封装，形成与socket相同的接口，并通过注册物理地址的方式降低RDMA网卡的缓存压力，优化性能。
 
 \section{\faGraduationCap\ 发表论文}
 \begin{itemize}
 \item Jin Zhang, Zhuocheng Ding, Yubin Chen, \textbf{Xingguo Jia}, Boshi Yu, Zhengwei Qi, and Haibing Guan. 2020. GiantVM: a Type-II Hypervisor Implementing Many-to-one Virtualization. In \textbf{VEE'20}
-\item \textbf{Xingguo Jia}, Jin Zhang, Boshi Yu, Xingyue Qian, Zhengwei Qi, and Haibing Guan. 2021. GiantVM: A Novel Distributed Hypervisor for Resource Aggregation with DSM-aware Optimizations. In \textbf{TACO'22} (To appear)
+\item \textbf{Xingguo Jia$^*$}, Jin Zhang$^*$, Boshi Yu, Xingyue Qian, Zhengwei Qi, and Haibing Guan. 2021. GiantVM: A Novel Distributed Hypervisor for Resource Aggregation with DSM-aware Optimizations. In \textbf{TACO'22}
 \end{itemize}
 
 % Reference Test
@@ -67,12 +71,13 @@
 \section{\faCogs\ 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item \textbf{编程语言:} C == Python > C++ > Shell \ \ \textbf{工具:} \LaTeX， Git， GDB \ \ \textbf{系统:} Linux 
+  \item \textbf{编程语言:} C > C++ > Python > Shell \ \ \textbf{工具:} \LaTeX， Git， GDB \ \ \textbf{系统:} Linux，QEMU
 \end{itemize}
 
 \section{\faHeartO\ 获奖情况}
+%\datedline{成功参与奖，美国大学生数学建模竞赛（MCM）}{2019 年1 月}
 \datedline{一等学业奖学金，SJTU}{2021 年12 月}
-\datedline{编写《深入浅出系统虚拟化:原理与实践》内存部分，获得教育部智能基座“突出贡献奖”}{2022 年1 月}
+\datedline{《深入浅出系统虚拟化:原理与实践》内存虚拟化，教育部智能基座“突出贡献奖”}{2022 年1 月}
 
 %% Reference
 %\newpage

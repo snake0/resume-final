@@ -21,18 +21,18 @@
 \datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2020 -- Present}
 \textit{Graduate student} in Software Engineering (SE), expected March 2023, \textbf{GPA:} 3.83/4.00
 \begin{itemize}
-  \item \textbf{Advisor:} Prof. Zhengwei Qi
+  \item Trusted Cloud Group (TCloud) \textbf{Advisor:} Prof. Zhengwei Qi
   \item \textbf{Research Interests:} Operating System, distributed system, virtualization
 \end{itemize}
 \datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2016 -- 2020}
 \textit{B.E.} in Software Engineering (SE), \textbf{GPA:} 3.50/4.30
 
 \section{\faUsers\ Research Experiences}
-\datedsubsection{\textbf{SJTU}, Trusted Cloud Group (TCloud), Shanghai, China}{Jun. 2019 -- Jan. 2021}
-\textbf{\textit{GiantVM:}} Top-down performance evaluation and optimizations based on a thread scheduling algorithm.
+\datedsubsection{\textbf{SJTU, TCloud}, Shanghai, China}{Jun. 2019 -- Present}
+\textbf{\textit{GiantVM:}} Top-down performance evaluation and optimizations using a scheduling algorithm.
 
-\datedsubsection{\textbf{Huawei Co. Hangzhou Research Inst.}, as an intern, Hangzhou, China}{Feb. 2022 -- Present}
-\textbf{\textit{Memory Pool:}} A memory pool based on recent high-speed networks (in progress).
+\datedsubsection{\textbf{Huawei Co. Hangzhou Research Inst.}, as an intern, Hangzhou, China}{Feb. 2022 -- Aug. 2022}
+\textbf{\textit{Memory Pool:}} Memory pool design and implementation based on recent high-speed networks.
 
 % Reference Test
 %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
@@ -42,13 +42,18 @@
 %\end{itemize}
 
 \section{\faInfo\ Projects}
-\datedsubsection{\textbf{GiantVM: DSM-aware Scheduler}\ \ \href{https://github.com/GiantVM/Linux-DSM/tree/taco-eval}{\faGithubSquare}}{Aug. 2020 -- Oct. 2021} 
+\datedsubsection{\textbf{DaS:} DSM-aware Scheduler for GiantVM\ \ \href{https://github.com/GiantVM/Linux-DSM/tree/taco-eval}{\faGithubSquare}}{Aug. 2020 -- Oct. 2021} 
 
 On GiantVM, memory-intensive applications could suffer from cross-node page sharing, leading to performance collapse. To overcome the bottleneck, we design DSM-aware Scheduler (DaS) in the guest kernel. When benchmarking with NPB, DaS achieves a performance boost of up to 3.5$\times$, compared to CFS. 
 
-\datedsubsection{\textbf{YFS: Yet another File System}\ \ \href{https://github.com/snake0/lab-cse}{\faGithubSquare}}{Sep. 2018 -- Jan. 2019}
+\datedsubsection{\textbf{LaS:} Load-aware Scheduler based on GiantVM\ \ \href{https://github.com/snake0/bachelor-thesis}{\faGithubSquare}}{Apr. 2020 -- Aug. 2020}
 
-Implementing a distributed file system YFS based on \texttt{inode} and \texttt{RPC} in C++. We first implemented a single-node version of YFS that supports sequential read/write operations, then extended it to be distributed using RPC. Finally, we implemented a lock server that could batch locking requests for concurrent file system accesses.
+Thanks to the SSI abstraction of GiantVM, workload migration could be done simply by guest-level
+scheduling. Also, DSM allows standby pages in the migration destination, which need not be transferred through
+the network. The saved network bandwidth is 68\% on average, compared to VM live migration.
+
+\datedsubsection{{\textbf{kRDMA:} RDMA-based network operation APIs}\ \ \href{https://github.com/snake0/krdma}{\faGithubSquare}}{Apr. 2022 -- Jun. 2022}
+The IB verbs interface is hard to use for kernel-level programming, and may suffer from inefficiencies if not used in a proper way. We introduce kRDMA, a set of kernel-level APIs for RDMA-based network operations, which simplifies the way to use RDMA. To boost performance, we register physical addresses with RDMA NICs to reduce cache consumption.
 
 \section{\faGraduationCap\ Publications}
 \begin{itemize}
@@ -63,12 +68,12 @@ Implementing a distributed file system YFS based on \texttt{inode} and \texttt{R
 
 \section{\faHeartO\ Honors and Awards}
 \datedline{\textit{First-class} academic scholarship, \textbf{SJTU} }{Dec. 2021}
-\datedline{Successful Participant, \textbf{MCM} }{Jan. 2019}
+%\datedline{Successful Participant, \textbf{MCM} }{Jan. 2019}
 \datedline{"System Virtualization: Principles and Practices", Outstanding Contribution Award, \textbf{MOE of PRC}}{Jan. 2022}
 
-\section{\faUsers\ Teaching Experiences}
-\datedline{Advanced Data Structure (SE2322), \textit{teaching assistant}, \textbf{SJTU} }{Apr. 2021 -- Jul. 2021}
-\datedline{Advanced Cloud OS (EI6709), \textit{teaching assistant}, \textbf{SJTU} }{Nov. 2021 -- Dec. 2021}
+%\section{\faUsers\ Teaching Experiences}
+%\datedline{Advanced Data Structure (SE2322), \textit{teaching assistant}, \textbf{SJTU} }{Apr. 2021 -- Jul. 2021}
+%\datedline{Advanced Cloud OS (EI6709), \textit{teaching assistant}, \textbf{SJTU} }{Nov. 2021 -- Dec. 2021}
 
 %\section{\faUsers\ Teaching Experiences}
 %\datedline{Advanced Cloud Operating Systems, SJTU }{Dec. 2021}
